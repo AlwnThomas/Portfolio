@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Alwin Thomas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header id="navbar">
+        <!-- Navbar Section -->
+    <nav id="navbar">
+
+    <div class="page">
+    <a href="#welcome-section">Home</a>
+    <a href="#projects">Projects</a>
+    </div>
+
+    <div class="social-icons">
+        <a href="mailto:alwnthomas@gmail.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/email-logo.png" alt="Email" class="nav-logo">
+        </a>
+        <a href="https://github.com/AlwnThomas" target="_blank" rel="noopener noreferrer">
+            <img src="images/github-logo.png" alt="GitHub" class="nav-logo">
+        </a>
+        <a href="https://www.linkedin.com/in/AlwnThomas" target="_blank" rel="noopener noreferrer">
+            <img src="images/linkedin-logo.png" alt="LinkedIn" class="nav-logo">
+        </a>
+    </div>
+    </nav>
+
+    </header>
+
+    <!-- Welcome Section -->
+    <section id="welcome-section">
+        <h1>Alwin Thomas</h1>
+        <p>Software Developer | AI & ML Graduate</p><br>
+        <p><i class="fas fa-map-marker-alt"></i> Cambridge, United Kingdom</p> 
+    </section>
+
+    <!-- Tech Stack Section -->
+<section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <ul>
+        <li><img src="images/JavaScript_logo.png" alt="JavaScript Logo" class="tech-logo"> JavaScript</li>
+        <li><img src="images/Java_logo.png" alt="Java Logo" class="tech-logo"> Java</li>
+        <li><img src="images/Python_logo.png" alt="Python Logo" class="tech-logo"> Python</li>
+        <li><img src="images/HTML5_logo.png" alt="HTML Logo" class="tech-logo"> HTML</li>
+        <li><img src="images/CSS3_logo.png" alt="CSS Logo" class="tech-logo"> CSS</li>
+        <li><img src="images/Matlab_Logo.png" alt="MATLAB Logo" class="tech-logo"> MATLAB</li>
+    </ul>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <article class="project-tile">
+            <h3>CitiSoft Software Showcase Application</h3>
+            <p>Developed an app to showcase software solutions offered by CitiSoft.<br>
+            Features intuitive navigation and provides detailed information on each software.<br>
+            <br>Skills: Programming Languages (C++, C#, Java, Python) Database Management (MySQL, Design, Management) · Software Development Life Cycle (SDLC) · Software Development Methodologies
+            </p>
+        </article>
+        <article class="project-tile">
+            <h3>Qube: Wearable Technology for Activity Monitoring</h3>
+            <p>Developing an advanced, futuristic activity tracking wearable utilising ARM technology. <br>
+                Leading the design of a full-stack IoT application that integrates seamlessly with the device. <br><br>
+                Skills: Programming Languages (JavaScript, Python, HTML5, CSS) · Database Management (MySQL, Design, Management) · MongoDB · ARM Assembly</p>
+        </article>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact-me">
+        <h2>Contact Me</h2>
+        <form action="mailto:alwnthomas@gmail.com" method="post" enctype="text/plain">
+            <input type="text" id="title" name="title" placeholder="Title" required><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" placeholder="Type your message here..." rows="6" required></textarea><br><br>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p>© 2024 Alwin Thomas | Software Developer</p>
+    </footer>
+
+<!-- JavaScript for Navbar Hide/Show on Scroll -->
+<script>
+   let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+    const navbar = document.querySelector("nav");
+    if (window.scrollY > lastScrollY) {
+        // Scrolling down
+        navbar.classList.add("hidden-nav");
+    } else {
+        // Scrolling up
+        navbar.classList.remove("hidden-nav");
+    }
+    lastScrollY = window.scrollY;
+});
+
+</script>
+
+</body>
+</html>

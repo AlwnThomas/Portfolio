@@ -1,0 +1,241 @@
+/* General Styles */
+body {
+    background-color: #f4f4f4;
+    font-family: Lato, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgba(40, 14, 106, 0.9);
+    color: #f4f4f4;
+    position: fixed;
+    width: 80%;
+    left: 10%; /* Center the navbar horizontally */
+    top: 20px;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.8s ease-in-out; /* Smooth transition */
+}
+
+nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.5s;
+}
+
+nav a:hover {
+    background-color: rgba(80, 48, 160, 0.778);
+    transform: scale3d(1.08, 1.08, 1.08);
+}
+
+.hidden-nav {
+    transform: translateY(-200%); /* Moves the navbar out of view */
+}
+
+.page {
+    display: flex;
+    align-items: left;
+}
+
+.social-icons {
+    display: flex; /* Flex container for social icons */
+}
+
+.nav-logo {
+    width: 24px; /* Set a fixed width for logos */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional: Add a margin to the body to avoid content being hidden behind the navbar */
+body {
+    padding-top: 80px; /* Adjust based on your navbar height */
+}
+
+
+/* Welcome Section */
+#welcome-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    text-align: center;
+    transform: translateY(-100px);
+}
+
+#welcome-section h1 {
+    color: #280e6a;
+    font-size: 4.5em;
+    line-height: 1.2; /* Improved line height */
+}
+
+#welcome-section p {
+    font-size: 1.2em; /* Adjust font size */
+    margin: 0; /* Add some margin */
+}
+
+#welcome-section .fa-map-marker-alt {
+    margin-right: 5px; /* Space between icon and text */
+    color: #333; /* Change icon color if needed */
+}
+
+/* Tech Stack Section */
+#tech-stack {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background color for contrast */
+    text-align: center;
+}
+
+#tech-stack h2 {
+    font-size: 1.6em;
+    margin-bottom: 25px; /* Space below the heading */
+}
+
+#tech-stack ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if the screen is too narrow */
+}
+
+#tech-stack li {
+    font-size: 1em; /* Adjust font size */
+    margin: 20px 20px; /* Space between list items */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    transition: transform 0.4s;
+}
+
+#tech-stack li:hover {
+    transform: scale(1.15);
+}
+
+.tech-logo {
+    width: 25px; /* Set a fixed width for logos */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 12px; /* Space between logo and text */
+    transition: transform 0.4s;
+}
+
+.tech-logo:hover {
+    transform: scale(1.15); /* Scale effect on hover */
+}
+
+/* Projects Section */
+#projects {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+#projects h2 {
+    text-align: center;
+}
+
+.project-tile {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
+    transition: transform 0.4s; /* Smooth transition for hover */
+}
+
+.project-tile:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.project-tile h3 {
+    margin: 0 0 10px 0;
+}
+
+/* Contact Me Section */
+#contact-me {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+#contact-me h2 {
+    text-align: center;
+}
+
+#contact-me form {
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+}
+
+#contact-me label {
+    display: block; /* Stack labels above inputs */
+    margin-bottom: 5px;
+}
+
+#contact-me input[type="text"],
+#contact-me textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 5px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between fields */
+    resize: none;
+}
+
+#contact-me input[type="submit"] {
+    background-color: #280e6a; /* Dark background for submit button */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+#contact-me input[type="submit"]:hover {
+    background-color: #40189d; /* Lighter on hover */
+}
+
+#contact-me hr {
+    width: 90%;
+    border: none;
+    border-top: 1px solid gray;
+}
+
+/* Footer Section */
+#footer {
+    font-size: 1em;
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Padding for top and bottom */
+    background-color: #280e6a; /* Dark background for footer */
+    color: white; /* White text color */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px;
+    }
+
+    #welcome-section h1 {
+        font-size: 2em;
+    }
+
+    .project-tile {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Additional styles for larger screens */
+    #projects {
+        max-width: 800px;
+        margin: auto; /* Centering projects section */
+    }
+}
