@@ -1,10 +1,16 @@
 /* General Styles */
+* {
+    box-sizing: border-box; /* Apply border-box model to all elements */
+}
+
 body {
     background-color: #f4f4f4;
-    font-family: Lato, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    width: 100%; /* Set the width of the body */
+    margin-left: auto; /* Center the body */
+    margin-right: auto; /* Center the body */
 }
 
 nav {
@@ -90,14 +96,13 @@ body {
 
 /* Tech Stack Section */
 #tech-stack {
-    padding: 40px 20px;
+    padding: 5px 5px;
     background-color: #f9f9f9; /* Light background color for contrast */
     text-align: center;
 }
 
 #tech-stack h2 {
-    font-size: 1.6em;
-    margin-bottom: 25px; /* Space below the heading */
+    font-size: 1.4em;
 }
 
 #tech-stack ul {
@@ -133,30 +138,115 @@ body {
 
 /* Projects Section */
 #projects {
-    padding: 40px 20px;
-    background-color: #f4f4f4;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fff; /* White background */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the tiles */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    width: 100%; /* Set width to 80% of the screen */
+    max-width: 2400px; /* Optional: Limit maximum width */
+    margin: 0 auto; /* Center the projects section */
 }
 
 #projects h2 {
-    text-align: center;
+    width: 80%; /* Full width for centering */
+    margin-bottom: 20px; /* Space below the title */
+    font-size: 2.5em; /* Increase font size for visibility */
+    color: #280e6a; /* Title color */
 }
 
 .project-tile {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
-    margin: 25px 0;
+    margin: 20px; /* Space between tiles */
     text-align: center;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
-    transition: transform 0.4s; /* Smooth transition for hover */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
+    transition: transform 0.4s, box-shadow 0.4s; /* Smooth transition for hover */
+    width: calc(40% - 20px); /* Set width to 40% minus margin for proper alignment */
+    min-height: 400px;
+    max-width: 400px; /* Optional: Limit maximum width */
 }
 
 .project-tile:hover {
-    transform: scale(1.1); /* Scale effect on hover */
+    transform: translateY(-5px); /* Move the tile up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .project-tile h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
     margin: 0 0 10px 0;
+}
+
+.project-image {
+    width: 100%; /* Full width of the tile */
+    height: 250px; /* Fixed height for square aspect */
+    overflow: hidden; /* Hide overflow if image is too big */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between image and title */
+}
+
+.project-image img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any whitespace below the image */
+}
+
+.skills-container {
+    margin-top: 10px; /* Space above the skills box */
+    display: flex; /* Use flexbox for arranging skills */
+    flex-wrap: wrap; /* Allow skills to wrap to the next line if needed */
+    justify-content: center; /* Center skills horizontally */
+}
+
+.skill {
+    background-color: rgba(40, 14, 106, 0.2); /* Light background for skills */
+    color: #280e6a; /* Text color */
+    border: 1px solid rgba(40, 14, 106, 0.5); /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Padding inside the box */
+    margin: 5px; /* Space between skill boxes */
+    text-align: center; /* Center text inside the skill box */
+    flex: 0 1 auto; /* Allow items to grow and shrink */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+}
+
+.skill:hover {
+    background-color: rgba(40, 14, 106, 0.4); /* Darken background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Prevent caret cursor on text */
+h1, h2, h3, p, .skill {
+    cursor: default; /* Sets the cursor to default (arrow) */
+}
+
+/* Optional: Add a pointer cursor for project tiles */
+.project-tile {
+    cursor: pointer; /* Pointer cursor for project tiles */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .project-tile {
+        width: calc(50% - 40px); /* Two columns on smaller screens */
+    }
+
+    #projects h2 {
+        font-size: 2em; /* Smaller title on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-tile {
+        width: 100%; /* Single column on mobile */
+    }
+
+    #welcome-section h1 {
+        font-size: 2em; /* Smaller welcome title on mobile */
+    }
 }
 
 /* Contact Me Section */
@@ -210,7 +300,7 @@ body {
 
 /* Footer Section */
 #footer {
-    font-size: 1em;
+    font-size: 0.8em;
     text-align: center; /* Center align text */
     padding: 20px 0; /* Padding for top and bottom */
     background-color: #280e6a; /* Dark background for footer */
@@ -227,15 +317,32 @@ body {
         font-size: 2em;
     }
 
+    #welcome-section p {
+        font-size: 1em; /* Adjust paragraph font size */
+    }
+
     .project-tile {
         padding: 15px;
+        width: 100%; /* Full width for project tiles on smaller screens */
+        margin: 10px 0; /* Space between tiles */
+    }
+
+    #tech-stack ul {
+        flex-direction: column; /* Stack items vertically */
     }
 }
 
-@media (min-width: 769px) {
-    /* Additional styles for larger screens */
-    #projects {
-        max-width: 800px;
-        margin: auto; /* Centering projects section */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column; /* Stack navigation items */
+    }
+
+    #welcome-section h1 {
+        font-size: 1.5em; /* Further reduce heading size */
+    }
+
+    #contact-me input[type="submit"] {
+        padding: 12px 20px; /* Increase padding for better touchability */
     }
 }
+
