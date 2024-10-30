@@ -42,6 +42,11 @@
         <p><i class="fas fa-map-marker-alt"></i> Cambridge, United Kingdom</p> 
     </section>
 
+     <!-- 3D Scene Section -->
+    <section id="threejs-section">
+        <canvas id="three-canvas"></canvas>
+    </section>
+
     <!-- Tech Stack Section -->
 <section id="tech-stack">
     <h2>Tech Stack</h2>
@@ -105,34 +110,8 @@
         <p>© 2024 Alwin Thomas | Software Developer</p>
     </footer>
 
-<!-- JavaScript for Navbar Hide/Show on Scroll -->
-<script>
- let lastScrollY = window.scrollY;
-let scrollTimeout; // Timer variable
-let isScrollingDown = false; // Flag to check if scrolling down
-
-window.addEventListener("scroll", () => {
-    const navbar = document.querySelector("nav");
-    
-    // Check if scrolling down
-    if (window.scrollY > lastScrollY) {
-        if (!isScrollingDown) {
-            isScrollingDown = true;
-            // Start timer if beginning to scroll down
-            scrollTimeout = setTimeout(() => {
-                navbar.classList.add("hidden-nav");
-            }, 900); // Wait for 0.9 seconds
-        }
-    } else {
-        // Scrolling up or staying in place
-        isScrollingDown = false;
-        clearTimeout(scrollTimeout); // Reset timer if direction changes
-        navbar.classList.remove("hidden-nav"); // Show navbar
-    }
-    
-    lastScrollY = window.scrollY;
-});
-</script>
+<!-- JavaScript Link -->
+<script type="module" src="main.js"></script>
 
 </body>
 </html>
