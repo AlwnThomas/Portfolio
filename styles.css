@@ -42,6 +42,7 @@ nav a:hover {
     transform: scale3d(1.08, 1.08, 1.08);
 }
 
+/* Common stylings */
 .hidden-nav {
     transform: translateY(-200%); /* Moves the navbar out of view */
 }
@@ -60,12 +61,6 @@ nav a:hover {
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Optional: Add a margin to the body to avoid content being hidden behind the navbar */
-body {
-    padding-top: 80px; /* Adjust based on your navbar height */
-}
-
-
 /* Welcome Section */
 #welcome-section {
     height: 100vh; /* Full viewport height */
@@ -75,18 +70,17 @@ body {
     align-items: center;
     background-color: #f4f4f4;
     text-align: center;
-    transform: translateY(-100px);
 }
 
 #welcome-section h1 {
     color: #280e6a;
     font-size: 4.5em;
-    line-height: 1.2; /* Improved line height */
+    line-height: 1; /* Improved line height */
 }
 
 #welcome-section p {
     font-size: 1.2em; /* Adjust font size */
-    margin: 0; /* Add some margin */
+    margin: 0; /* Remove margin */
 }
 
 #welcome-section .fa-map-marker-alt {
@@ -176,7 +170,7 @@ body {
 
 .project-tile h3 {
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 0 10px 0;
 }
 
@@ -292,12 +286,6 @@ h1, h2, h3, p, .skill {
     background-color: #40189d; /* Lighter on hover */
 }
 
-#contact-me hr {
-    width: 90%;
-    border: none;
-    border-top: 1px solid gray;
-}
-
 /* Footer Section */
 #footer {
     font-size: 0.8em;
@@ -305,6 +293,104 @@ h1, h2, h3, p, .skill {
     padding: 20px 0; /* Padding for top and bottom */
     background-color: #280e6a; /* Dark background for footer */
     color: white; /* White text color */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1d0f45;
+    color: #f4f4f4;
+}
+
+.dark-mode nav {
+    background-color: #0f0628;
+    color: #f4f4f4;
+}
+
+.dark-mode #welcome-section{
+    background-color: #1d0f45;
+}
+
+.dark-mode #welcome-section h1 {
+    color: #f4f4f4;
+}
+
+.dark-mode #welcome-section p {
+    color: #dadada;
+}
+
+.dark-mode #welcome-section .fa-map-marker-alt {
+    color: #9e9e9e; /* Change icon color if needed */
+}
+
+.dark-mode #tech-stack {
+    background-color: #190d3a;
+}
+
+.dark-mode #projects {
+    background-color: #1d0f45;
+}
+
+.dark-mode #projects h2 {
+    color: #f4f4f4; /* Title color */
+}
+
+.dark-mode .project-tile {
+    background-color: #2a1660;
+    border: 1px solid #451eb0;
+    box-shadow: 0 2px 10px rgba(190, 92, 255, 0.495); /* Added shadow */
+}
+
+.dark-mode .project-tile:hover {
+    box-shadow: 0 4px 20px rgba(65, 30, 89, 0.241); /* Increase shadow on hover */
+}
+
+.dark-mode .skill {
+    background-color: rgba(119, 37, 195, 0.359); /* Light background for skills */
+    color: #f4f4f4; /* Text color */
+    border: 1px solid rgba(149, 36, 255, 0.5); /* Border color */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+}
+
+.dark-mode .skill:hover {
+    background-color: rgba(149, 84, 233, 0.601);
+    border: 1px solid rgba(170, 11, 255, 0.717);
+}
+
+.dark-mode #contact-me {
+    background-color: #190d3a;
+}
+
+.dark-mode #contact-me input[type="text"],
+.dark-mode #contact-me textarea {
+    background-color: #d7d7d7;
+    border: 1px solid #601f79;
+}
+
+.dark-mode #footer {
+    background-color: #1d0f45;
+}
+
+/* Toggle button styling */
+#dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3e199c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #7f48ff;
 }
 
 /* Media Queries */
