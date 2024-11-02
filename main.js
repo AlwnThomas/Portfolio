@@ -34,7 +34,18 @@ toggleButton.addEventListener('click', () => {
     const icon = toggleButton.querySelector('i');
     if (document.body.classList.contains('dark-mode')) {
         icon.classList.replace('fa-moon', 'fa-sun');
+        switchTechStackLogos('dark');
     } else {
         icon.classList.replace('fa-sun', 'fa-moon');
+        switchTechStackLogos('light');
     }
 });
+
+// Function to switch tech stack logos based on mode
+function switchTechStackLogos(mode) {
+    const techLogos = document.querySelectorAll('.tech-logo');
+    techLogos.forEach(logo => {
+        logo.src = logo.getAttribute(mode === 'dark' ? 'data-dark' : 'data-light');
+    });
+}
+
