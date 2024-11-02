@@ -182,7 +182,7 @@ body {
 
 .project-image {
     width: 100%; /* Full width of the tile */
-    height: 250px; /* Fixed height for square aspect */
+    height: auto; /* Fixed height for square aspect */
     overflow: hidden; /* Hide overflow if image is too big */
     border-radius: 8px; /* Rounded corners */
     margin-bottom: 10px; /* Space between image and title */
