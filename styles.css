@@ -196,6 +196,7 @@ nav a:hover {
 }
 
 .skill {
+    font-size: 0.8rem;
     background-color: rgba(40, 14, 106, 0.2); /* Light background for skills */
     color: #280e6a; /* Text color */
     border: 1px solid rgba(40, 14, 106, 0.5); /* Border color */
