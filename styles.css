@@ -223,34 +223,24 @@ h1, h2, h3, p, .skill {
     cursor: pointer; /* Pointer cursor for project tiles */
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .project-tile {
-        width: calc(50% - 40px); /* Two columns on smaller screens */
-    }
-
-    #projects h2 {
-        font-size: 2em; /* Smaller title on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .project-tile {
-        width: 100%; /* Single column on mobile */
-    }
-
-    #welcome-section h1 {
-        font-size: 2em; /* Smaller welcome title on mobile */
-    }
-}
-
 /* Contact Me Section */
 #contact-me {
+    height: 80vh;
     padding: 40px 20px;
     background-color: #f9f9f9; /* Light background for contrast */
 }
 
-#contact-me h2 {
+#contact-me h4{
+    font-weight: 200;
+    margin-bottom: 5px;
+    padding-top: 90px;
+    text-align: center;
+}
+
+#contact-me h1 {
+    font-weight: 300;
+    margin-top: 0;
+    font-size: 50px;
     text-align: center;
 }
 
@@ -394,8 +384,16 @@ body.dark-mode {
     background-color: #7f48ff;
 }
 
-/* Media Queries */
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
+    .project-tile {
+        width: calc(50% - 40px); /* Two columns on smaller screens */
+    }
+
+    #projects h2 {
+        font-size: 2em; /* Smaller title on smaller screens */
+    }
+
     nav {
         padding: 15px;
     }
@@ -413,13 +411,13 @@ body.dark-mode {
         width: 100%; /* Full width for project tiles on smaller screens */
         margin: 10px 0; /* Space between tiles */
     }
-
-    #tech-stack ul {
-        flex-direction: column; /* Stack items vertically */
-    }
 }
 
 @media (max-width: 480px) {
+    .project-tile {
+        width: 100%; /* Single column on mobile */
+    }
+
     nav {
         flex-direction: column; /* Stack navigation items */
     }
