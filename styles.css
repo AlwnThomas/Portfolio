@@ -426,6 +426,10 @@ body.dark-mode {
         font-size: 1.5em; /* Further reduce heading size */
     }
 
+    #welcome-section p {
+        font-size: 0.8em; /* Adjust paragraph font size */
+    }
+
     #contact-me input[type="submit"] {
         padding: 12px 20px; /* Increase padding for better touchability */
     }
