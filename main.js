@@ -13,7 +13,7 @@ window.addEventListener("scroll", () => {
             // Start timer if beginning to scroll down
             scrollTimeout = setTimeout(() => {
                 navbar.classList.add("hidden-nav");
-            }, 900); // Wait for 0.9 seconds
+            }, 400); // Wait for 0.4 seconds
         }
     } else {
         // Scrolling up or staying in place

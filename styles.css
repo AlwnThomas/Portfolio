@@ -27,7 +27,23 @@ nav {
     align-items: center;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.8s ease-in-out; /* Smooth transition */
+    transition: transform 0.6s ease-in-out; /* Smooth transition */
+}
+
+.navbar-title {
+    font-size: 21px;
+    color: #fff;
+    margin: 0;
+    font-weight: 600;
+}
+
+.last-l {
+    color: #2abbf9;
+}
+
+.navbar-title:hover {
+    color: #2abbf9; /* Change color on hover */
+    scale: 1.05;
 }
 
 nav a {
@@ -35,11 +51,12 @@ nav a {
     text-decoration: none;
     padding: 10px;
     transition: background-color 0.5s;
+    border-radius: 10px;
 }
 
 nav a:hover {
     background-color: rgba(80, 48, 160, 0.778);
-    transform: scale3d(1.08, 1.08, 1.08);
+    transform: scale3d(1.04, 1.04, 1.04);
 }
 
 /* Common stylings */
@@ -52,12 +69,8 @@ nav a:hover {
     align-items: left;
 }
 
-.social-icons {
-    display: flex; /* Flex container for social icons */
-}
-
 .nav-logo {
-    width: 24px; /* Set a fixed width for logos */
+    width: 25px; /* Set a fixed width for logos */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -76,16 +89,46 @@ nav a:hover {
     color: #280e6a;
     font-size: 4.5em;
     line-height: 1; /* Improved line height */
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 #welcome-section p {
-    font-size: 1.2em; /* Adjust font size */
-    margin: 0; /* Remove margin */
+    font-size: 1.1em; /* Adjust font size */
+    margin: 0 4; /* Remove margin top and add side margins */
 }
 
 #welcome-section .fa-map-marker-alt {
-    margin-right: 5px; /* Space between icon and text */
-    color: #333; /* Change icon color if needed */
+    margin-right: 4px; /* Space between icon and text */
+    color: #333;
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: inline-flex; /* Flex container for social icons */
+    padding: 5px;
+    border-radius: 12px;
+    gap: 40px;
+    justify-content: center;
+}
+
+.social-icons a {
+    display: flex; /* Flex for icon centering */
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Fixed width and height for circular shape */
+    height: 40px;
+    background-color: #280e6a; /* Background color for each icon */
+    color: #280e6a; /* Icon color */
+    border-radius: 50%; /* Makes each icon circular */
+    text-decoration: none; /* Remove underline if they are links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.social-icons a:hover {
+    background-color: #7f48ff; /* Change color on hover */
+    color: #280e6a;
 }
 
 /* Tech Stack Section */
