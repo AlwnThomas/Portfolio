@@ -450,7 +450,7 @@ body.dark-mode {
     }
 
     #projects h2 {
-        font-size: 2em; /* Smaller title on smaller screens */
+        font-size: 2.5em; /* Smaller title on smaller screens */
     }
 
     nav {
@@ -469,6 +469,16 @@ body.dark-mode {
         padding: 15px;
         width: 100%; /* Full width for project tiles on smaller screens */
         margin: 10px 0; /* Space between tiles */
+    }
+
+    .nav-logo {
+        width: 24px; /* Set a fixed width for logos */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .social-icons a {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -491,6 +501,16 @@ body.dark-mode {
 
     #contact-me input[type="submit"] {
         padding: 12px 20px; /* Increase padding for better touchability */
+    }
+
+    .nav-logo {
+        width: 18px; /* Set a fixed width for logos */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .social-icons a {
+        width: 24px;
+        height: 24px;
     }
 }
 
