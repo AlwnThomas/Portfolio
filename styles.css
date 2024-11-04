@@ -5,7 +5,7 @@
 
 body {
     background-color: #f4f4f4;
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-family: Lato, Verdana, Geneva, Tahoma, sans-serif ;
     margin: 0;
     padding: 0;
     width: 100%; /* Set the width of the body */
@@ -43,7 +43,8 @@ nav {
 
 .navbar-title:hover {
     color: #2abbf9; /* Change color on hover */
-    scale: 1.05;
+    transform: scale(1.15);
+    transition: color 1.5s, transform 0.5s;
 }
 
 nav a {
@@ -57,6 +58,7 @@ nav a {
 nav a:hover {
     background-color: rgba(80, 48, 160, 0.778);
     transform: scale3d(1.04, 1.04, 1.04);
+    transition: background-color 0.5s, transform 0.3s;
 }
 
 /* Common stylings */
@@ -129,6 +131,8 @@ nav a:hover {
 .social-icons a:hover {
     background-color: #7f48ff; /* Change color on hover */
     color: #280e6a;
+    transform: scale(1.15);
+    transition: transform 0.5s;
 }
 
 /* Tech Stack Section */
@@ -140,6 +144,10 @@ nav a:hover {
 
 #tech-stack h2 {
     font-size: 1.4em;
+}
+
+.tech {
+    font-size: 18px;
 }
 
 #tech-stack ul {
@@ -193,6 +201,10 @@ nav a:hover {
     color: #280e6a; /* Title color */
 }
 
+.project-title {
+    font-size: 28px;
+}
+
 .project-tile {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -212,7 +224,6 @@ nav a:hover {
 }
 
 .project-tile h3 {
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     margin: 0 0 10px 0;
 }
