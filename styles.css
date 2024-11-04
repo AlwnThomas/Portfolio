@@ -367,6 +367,11 @@ body.dark-mode {
     color: #9e9e9e; /* Change icon color if needed */
 }
 
+.dark-mode .social-icons{
+    color: #280e6a;
+    background-color: #280e6a;
+}
+
 .dark-mode #tech-stack {
     background-color: #190d3a;
 }
