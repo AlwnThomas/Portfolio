@@ -51,14 +51,14 @@ nav a {
     color: #f4f4f4;
     text-decoration: none;
     padding: 10px;
-    transition: background-color 0.5s;
+    margin: 0 3px;
     border-radius: 10px;
 }
 
 nav a:hover {
     background-color: rgba(80, 48, 160, 0.778);
     transform: scale3d(1.04, 1.04, 1.04);
-    transition: background-color 0.5s, transform 0.3s;
+    transition: background-color 0.8s, transform 0.3s;
 }
 
 /* Common stylings */
