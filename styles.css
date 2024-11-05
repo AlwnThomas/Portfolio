@@ -35,6 +35,8 @@ nav {
     color: #fff;
     margin: 0;
     font-weight: 600;
+    display: inline-block;
+    transition: transform 0.2s ease;
 }
 
 .last-l {

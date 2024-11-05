@@ -49,3 +49,33 @@ function switchTechStackLogos(mode) {
     });
 }
 
+//navbar magnetic effect
+  const navbarTitle = document.querySelector('.navbar-title');
+
+  document.addEventListener('mousemove', (event) => {
+    // Get the position of the mouse
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    // Get the position of the navbar title
+    const rect = navbarTitle.getBoundingClientRect();
+    const titleX = rect.left + rect.width / 2;
+    const titleY = rect.top + rect.height / 2;
+
+    // Calculate distance between mouse and title
+    const distanceX = mouseX - titleX;
+    const distanceY = mouseY - titleY;
+
+    // Define the maximum distance for the effect to apply
+    const maxDistance = 100;
+
+    // Only apply the effect if within the range
+    if (Math.abs(distanceX) < maxDistance && Math.abs(distanceY) < maxDistance) {
+      // Scale the effect based on proximity
+      const pullFactor = 0.2; // Adjust this factor to control strength of effect
+      navbarTitle.style.transform = `translate(${distanceX * pullFactor}px, ${distanceY * pullFactor}px)`;
+    } else {
+      // Reset to original position if out of range
+      navbarTitle.style.transform = 'translate(0, 0)';
+    }
+  });
