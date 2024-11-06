@@ -1,3 +1,3 @@
 # Portfolio
-<p>AI & ML Graduate | Building Smart Solutions</p>
+<p>AI Developer | Building Smart Solutions</p>
 
