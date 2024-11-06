@@ -1,3 +1,3 @@
-# Alwin Thomas Portfolio
-<h2>AI & ML Graduate | Building Smart Solutions</h2>
-<p>A simple portfolio website showcasing my projects.</p>
+# Portfolio
+<p>AI & ML Graduate | Building Smart Solutions</p>
+
